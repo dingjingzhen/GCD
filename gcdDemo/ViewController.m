@@ -28,21 +28,10 @@
 - (void)testOne
 
 {
-    
     static dispatch_once_t onceToken;
-    
-    static dispatch_once_t onceTock;
-    
-    dispatch_once(&onceTock, ^{
-        NSLog(@"");
-    });
- 
     dispatch_once(&onceToken,^{
-        
         NSLog(@"代码块只执行了一次");
-        
     });
-    
 }
 
 
